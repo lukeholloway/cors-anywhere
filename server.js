@@ -22,11 +22,9 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  // originWhitelist: originWhitelist,
-  originWhitelist: ['https://luceco-test.herokuapp.com'],
+  originWhitelist: originWhitelist,
   requireHeader: ['origin', 'x-requested-with'],
-  // checkRateLimit: checkRateLimit,
-  checkRateLimit: ['50 3 lucecodev.wpengine.com, luceco.com, luceco-test.herokuapp.com'],
+  checkRateLimit: checkRateLimit,
   removeHeaders: [
     'cookie',
     'cookie2',
