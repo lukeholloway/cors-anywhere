@@ -23,10 +23,10 @@ var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
   // originWhitelist: originWhitelist,
-  originWhitelist: ['https://lucecodev.wpengine.com, https://www.luceco.com, https://luceco-test.herokuapp.com/'],
+  originWhitelist: ['https://luceco-test.herokuapp.com'],
   requireHeader: ['origin', 'x-requested-with'],
   // checkRateLimit: checkRateLimit,
-  checkRateLimit: ['50 3 lucecodev.wpengine.com, luceco.com'],
+  checkRateLimit: ['50 3 lucecodev.wpengine.com, luceco.com, luceco-test.herokuapp.com'],
   removeHeaders: [
     'cookie',
     'cookie2',
