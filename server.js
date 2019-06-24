@@ -25,7 +25,8 @@ cors_proxy.createServer({
   // originWhitelist: originWhitelist,
   originWhitelist: ['https://lucecodev.wpengine.com'],
   requireHeader: ['origin', 'x-requested-with'],
-  checkRateLimit: checkRateLimit,
+  // checkRateLimit: checkRateLimit,
+  checkRateLimit: ['50 3 lucecodev.wpengine.com'],
   removeHeaders: [
     'cookie',
     'cookie2',
