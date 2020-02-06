@@ -25,7 +25,8 @@ cors_proxy.createServer({
   //originWhitelist: originWhitelist,
   originWhitelist: ['https://luceco-test.herokuapp.com', 'https://luceco.com', 'https://luceco-cors.herokuapp.com', 'https://luceco.herokuapp.com/', 'https://www.luceco.com', 'https://content.luceco.com'],
   requireHeader: ['origin', 'x-requested-with'],
-  checkRateLimit: checkRateLimit,
+  // checkRateLimit: checkRateLimit,
+  checkRateLimit: null,
   removeHeaders: [
     'cookie',
     'cookie2',
